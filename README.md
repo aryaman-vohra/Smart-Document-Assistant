@@ -22,8 +22,8 @@
 
 ### 📦 Installation
 
-git clone https://github.com/<your-username>/smart-document-assistant.git
-cd smart-document-assistant
+git clone https://github.com/aryaman-vohra/Smart-Document-Assistant.git
+cd Smart-Document-Assistant
 pip install -r requirements.txt
 
 ### 📦 Setup API Key
