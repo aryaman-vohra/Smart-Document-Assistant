@@ -1,0 +1,77 @@
+/* Custom styles for the document assistant */
+.main-header {
+    text-align: center;
+    color: #2E86C1;
+    margin-bottom: 2rem;
+}
+
+.upload-section {
+    border: 2px dashed #BDC3C7;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.summary-box {
+    background-color: #F8F9FA;
+    border-left: 4px solid #3498DB;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.question-box {
+    background-color: #E8F6FF;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 1px solid #D4E6F1;
+}
+
+.answer-box {
+    background-color: #E8F5E8;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 1px solid #A9DFBF;
+}
+
+.reference-text {
+    font-size: 0.9em;
+    color: #5D6D7E;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.challenge-question {
+    background-color: #FFF3CD;
+    border: 1px solid #FFEAA7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.evaluation-box {
+    background-color: #F4F4F4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.score-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #E74C3C;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .upload-section {
+        padding: 1rem;
+    }
+    
+    .summary-box, .question-box, .answer-box {
+        padding: 0.8rem;
+    }
+}
