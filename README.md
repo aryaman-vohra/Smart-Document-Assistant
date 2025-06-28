@@ -1,103 +1,105 @@
-🧠 Smart Document Assistant
-Transform your documents into interactive learning tools using Gemini-powered AI.
+# 🧠 Smart Document Assistant  
+**Transform your documents into interactive learning tools.**  
 
+---
 
+## 🚀 Features
 
+- 📄 **Document Upload**: Supports `.pdf` and `.txt` files (max 10MB)  
+- 🧠 **Auto Summary**: Generates a concise 150-word summary  
+- 💬 **Ask Anything Mode**: Natural language Q&A over your document  
+- 🎯 **Challenge Mode**: AI-generated comprehension quizzes  
+- 🧠 **Session Memory**: Maintains conversational context  
+- 📚 **Cited Answers**: Every response includes document references  
 
-🚀 Features
-📄 Document Upload: Supports .pdf and .txt (up to 10MB)
+---
 
-🧠 Auto Summary: Generates a 150-word concise summary
+## 🛠️ Quick Start
 
-💬 Ask Anything Mode: Natural language Q&A over your document
+### ✅ Prerequisites
+- Python **3.8+**
+- **Gemini API Key** from [Google AI Studio](https://makersuite.google.com/app)
 
-🎯 Challenge Mode: Test your understanding with AI-generated quizzes
+### 📦 Installation
 
-🔁 Conversation Memory: Maintains session history
-
-📚 Cited Responses: All answers include document-based references
-
-🛠️ Quick Start
-✅ Prerequisites
-Python 3.8+
-
-Gemini API Key (from Google AI Studio)
-
-📦 Installation
 git clone https://github.com/<your-username>/smart-document-assistant.git
 cd smart-document-assistant
 pip install -r requirements.txt
-🔐 Setup API Key
+
+### 📦 Setup API Key
 cp .env.example .env
-# Open `.env` and add your Gemini API key
+# Edit .env and add:
 GEMINI_API_KEY=your-key-here
 ▶️ Run the App
 streamlit run app.py
-Open in browser: http://localhost:8501
+📍 Access at: http://localhost:8501
 
-🧩 Architecture Overview
-Core Modules
+### 🧩 Architecture Overview
 Module	Responsibilities
-DocumentProcessor	Parses and cleans PDF/TXT files
-AIAssistant	Handles summarization, Q&A, session memory
-QuestionGenerator	Creates challenge questions & evaluates answers
+DocumentProcessor	Parses & cleans PDF/TXT files
+AIAssistant	Summarizes content, answers questions, remembers context
+QuestionGenerator	Creates quizzes & evaluates user responses
 
-📈 Data Flow
-Upload → Text Extraction → Summary Generation
-                ↓
-Ask Anything → Contextual Gemini Response
-                ↓
-Challenge Me → Question Generation → User Answer → Evaluation
-⚙️ Configuration
-Customize behavior via config/settings.py:
+### 📈 Data Flow
+
+
+Upload ➝ Text Extraction ➝ Summary Generation
+                         ➝
+   Ask Anything ➝ Contextual Gemini Response
+                         ➝
+      Challenge Me ➝ AI Questions ➝ Your Answers ➝ Evaluation
+
+### ⚙️ Configuration
+Edit config/settings.py to customize:
 
 model: Gemini model name
 
-temperature: Controls creativity (default: 0.7)
+temperature: Creativity level (default: 0.7)
 
-chunk_size: Document chunking for large inputs
+chunk_size: Document chunk size (for splitting long text)
 
-max_tokens: Limit API output size
+max_tokens: Max tokens in API response
 
-🔐 Security & Privacy
-Documents are processed locally and not stored
+### 🔐 Security & Privacy
+🛡️ Local document processing (no permanent storage)
 
-API requests are made securely to Google AI endpoints
+🔒 Secure API calls to Gemini (Google AI)
 
-No data is persisted between sessions
+❌ No session data is persisted
 
-⚡ Optimization Techniques-
+### ⚡ Performance Optimization
+📦 Chunked Processing: Handles large documents
 
-Chunked document processing
+🎯 Prompt Engineering: Efficient input design
 
-Token-efficient prompt design
+🧠 Streamlit Caching: Fast reloads with @st.cache_resource
 
-Cached components (@st.cache_resource)
+⚡ Streaming API: Fast Gemini responses
 
-Minimal latency with Gemini streaming
+### 🧪 Error Handling
+✅ File validation: size and type
 
-🧪 Error Handling
+✅ API fallback with friendly messages
 
-✅ File size and type validation
+✅ Input checks with visual feedback
 
-✅ Graceful fallback for API errors
-
-✅ Empty input checks with clear messages
-
-🛠️ Troubleshooting
+### 🛠️ Troubleshooting
 Issue	Solution
-🔑 API Key Error	Ensure GEMINI_API_KEY is set in .env
-📄 Upload Fails	Check file size (≤10MB), use PDF or TXT
-🐢 Slow Response	Large docs take longer—reduce file size
+🔑 API Key Error	Make sure GEMINI_API_KEY is set in .env
+📄 Upload Fails	File must be .pdf or .txt, ≤10MB size
+🐢 Slow Response	Use smaller or more focused documents
 
-🔮 Future Enhancements-
+### 🔮 Future Enhancements
 
-🗃️ Multi-document support
+🗂️ Multi-document support
 
-✍️ Editable questions before evaluation
+✍️ Editable quiz questions before evaluation
 
-📤 Export summary/QA results
+📤 Export summaries / QA results
 
-📊 Performance analytics
+📊 Analytics dashboard
 
-🌐 Multilingual support
+🌐 Multilingual document support
+
+
+
